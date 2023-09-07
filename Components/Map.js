@@ -1,8 +1,10 @@
+
 import React from "react";
 import { View, StyleSheet, Button, Alert } from "react-native";
 import MapView, { Marker, Polyline } from "react-native-maps";
 
-const App = () => {
+const Map = (props) => {
+  console.log(props);
   const mumbaiCoordinates = {
     latitude: 19.076,
     longitude: 72.8777,
@@ -12,7 +14,7 @@ const App = () => {
     longitude: 72.8296,
   };
 
-  const coordinates = [mumbaiCoordinates, andheriCoordinates]; 
+  const coordinates = [mumbaiCoordinates, andheriCoordinates]; // Array of coordinates for the polyline
 
   const StartRide = () => {
     Alert.alert(
@@ -70,4 +72,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Map;
+
